@@ -35,7 +35,7 @@ class Program
 
         if (percent >= 70)
         {
-            Console.WriteLine("You passed!");
+            Console.WriteLine("Way to go, you passed!");
         }
         else
         {
