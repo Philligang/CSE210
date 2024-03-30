@@ -1,20 +1,38 @@
-public class Entry {
+using System;
 
-    public string _date;
+namespace DailyJournal
+{
+    class Entry
+    {
+        public string _prompt;
+        public string _response;
+        public string _date;
 
-    public string _entry;
+        public Entry(string prompt, string response, string date)
+        {
+            _prompt = prompt;
+            _response = response;
+            _date = date;
+        }
 
-    public string _prompt;
+        public string GetPrompt()
+        {
+            return _prompt;
+        }
 
-    public Entry(string _date, string _entry, string _prompt){
-        // date = _date;
-        // entry = _entry;
-        // prompt = _prompt;
+        public string GetResponse()
+        {
+            return _response;
+        }
+
+        public string GetDate()
+        {
+            return _date;
+        }
+
+        public override string ToString()
+        {
+            return $"Date: {_date} - Prompt: {_prompt} \n{_response}\n";
+        }
     }
-
-
-    public void Display() {
-        Console.WriteLine($"{_date} ({_entry}) {_prompt}");
-    }
-
 }
